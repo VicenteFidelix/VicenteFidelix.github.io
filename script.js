@@ -65,9 +65,38 @@ function copyToClipboard(text, notificationId, event) {
         });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const notificationBar = document.querySelector(".notification-bar");
+
+    setTimeout(() => {
+        notificationBar.style.display = "none";
+    }, 5000);
+});
+
+function fecharNotificacao() {
+    const notificationBar = document.querySelector(".notification-bar");
+    notificationBar.style.display = "none";
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const firstButton = botoes[0];
     scrollAndUpdateButton(0);
     firstButton.classList.add("btn-active");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const firstButton = botoes[0];
+    scrollAndUpdateButton(0);
+    firstButton.classList.add("btn-active");
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % botoes.length;
+            scrollAndUpdateButton(currentIndex);
+        } else if (event.key === "ArrowLeft") {
+            currentIndex = (currentIndex - 1 + botoes.length) % botoes.length;
+            scrollAndUpdateButton(currentIndex);
+        }
+    });
+});
+

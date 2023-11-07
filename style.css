@@ -7,30 +7,6 @@ body {
     margin: auto; 
 }
 
-.scroll-instruction {
-    position: fixed;
-    bottom: 20px;
-    left: 50%; 
-    transform: translateX(-50%); 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-}
-
-.scroll-instruction img {
-    width: 30px;
-    height: 30px;
-}
-
-.scroll-instruction p {
-    margin: 0;
-}
-
 .conteudo-portugues {
     text-align: center;
     margin: 20px;
@@ -48,7 +24,6 @@ body {
 
 .content-wrapper {
     display: flex;
-
 }
 
 .left {
@@ -56,18 +31,29 @@ body {
     padding: 5px;
     margin-left: 10px;
 }
+
 .leftProj, .leftHist {
     flex: 1; 
     padding: 5px;
     margin: auto;
 }
 
-.projetoImg, .historiaImg {
+.projetoImg {
     flex: 1; 
     padding: 5px;
     margin-right: 10px;
     max-width: 200px;
     border-radius: 30px;
+}
+
+.historiaImg {
+    flex: 1; 
+    padding: 5px;
+    margin-right: -70px;
+    margin-left: -100px;
+    max-width: 220px;
+    border-radius: 60px;
+    transform: rotate(-90deg);
 }
 
 .right {
@@ -90,8 +76,6 @@ body {
 }
 
 
-
-
 .right-cursos {
     flex: 3;
     font-size: auto; 
@@ -99,9 +83,6 @@ body {
     padding-left: 15px;
     text-align: justify;
 }
-
-
-
 
 .cursos {
     display: flex;
@@ -151,13 +132,9 @@ p {
 
 
 
-
-
-
 .redes-e-contatos {
     text-align: center;
 }
-
 
 .contact-square {
     display: inline-block;
@@ -201,12 +178,10 @@ p {
     border-radius: 30%;
 }
 
-
 .contact-square a {
     text-decoration: none;
     color: #044904;    
 }
-
 
 .contact-square + .contact-square {
     margin-left: 20px;
@@ -219,6 +194,7 @@ p {
     transition: 0.3s;
 
 }
+
 .copy-button:hover {
     cursor: pointer;
     color: rgba(9, 236, 96, 0.541); 
@@ -227,8 +203,6 @@ p {
 .copy-button:active {
     transform: scale(0.9); 
 }
-
-
 
 .center {
     text-align: center;
@@ -248,7 +222,6 @@ p {
     transform: translate(-50%, -50%);
     transition: opacity 0.2s;
   }
-
   
   .copy-notification.active {
     display: block;
@@ -306,8 +279,8 @@ p {
 }
 
 .btn {
-    padding: 20px 40px;
-    background-color: #333;
+    padding: 10px 18px;
+    background-color:#3e3c3c ;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -317,45 +290,74 @@ p {
 }
 
 .btn:hover {
-    background-color: #155c42;
+    background-color: rgb(36, 122, 90);
 }
 
 .btn-active {
-    background-color: #19553e; 
+    background-color: rgb(24, 151, 113) 
 }
 
 .btn:not(.btn-active):hover {
-    background-color: #4CAF50;
+    background-color: rgb(49, 174, 53);
     color: #fff;
 }
 
-
 .floating-icons {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    font-size: 22px;
+    top: 40%;
+    left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.floating-icons i {
-    font-size: 34px;
-    color: #333; 
-    background-color: #ffffff00; 
+.icon-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: color 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.icon-container i {
+    font-size: 28px;
+    color: #333;
+    background-color: #ffffff00;
     border-radius: 50%;
-    font-size: auto;
     padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.floating-icons i:hover {
-    background-color: #333; 
-    color: #fff; 
+.icon-container .icon-text {
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateX(-100%);
+    margin-left: 10px;
+    display: inline-block;
+    pointer-events: none;
+    font-size: 0; /* Define o tamanho da fonte como 0 para ocultar completamente o texto */
 }
 
+.icon-container:hover {
+    color: #fff;
+    display: inline-block; /* Mostra a div do ícone apenas no hover */
+}
+
+.icon-container:hover i {
+    background-color: #333;
+    color: #fff;
+    transform: translateX(10px);
+}
+
+.icon-container:hover .icon-text {
+    transform: translateX(0);
+    opacity: 1;
+    font-size: 16px; /* Define o tamanho da fonte desejado para o texto */
+}
 
 #video-bg {
     position: fixed;
@@ -392,6 +394,44 @@ p {
     animation: spin 2s linear infinite;
 }
 
+.notification-bar {
+    position: fixed;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(158, 153, 153, 0.801); 
+    color: #0c0101; 
+    text-align: center;
+    padding: 10px;
+    z-index: 9999;
+    border-radius: 20px;
+    border: 2px solid #666; 
+    display: flex;
+    align-items: center;
+    size: 30px;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-content img {
+    max-width: 100px; 
+    margin-right: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    background: none;
+    border: none;
+    color: #fa0101;
+    font-size: 15px;
+    cursor: pointer;
+}
 
 
 @keyframes spin {

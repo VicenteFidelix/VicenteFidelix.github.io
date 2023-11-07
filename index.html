@@ -29,7 +29,7 @@
             </div>
             <div class="right">
                 <p>
-                    Me chamo Vicente Fidelix. Desde infância fui antenado com tecnologia. Graduado em Fisioterapia, experiência na função de professor universitário por 4 anos. Estudando <strong>Desenvolvimento Web</strong> desde janeiro de 2023. Atuamente focado na mudança de carreira para a mesma, utilizando ferramentas tais como <strong>JavaScript, HTML, CSS</strong> e iniciando em <strong>Angular</strong>.
+                    Me chamo Vicente Fidelix. Desde infância fui antenado com tecnologia. Graduado em Fisioterapia, experiência como professor universitário por 4 anos. Estudando <strong>Desenvolvimento Web</strong> desde janeiro de 2023. Atuamente focado na mudança de carreira para a mesma, utilizando ferramentas tais como <strong>JavaScript, HTML, CSS</strong> e iniciando <strong>Angular Framework</strong>.
                 </p>
                     
                 <p>
@@ -182,13 +182,30 @@
         </ul>
     </div>
 </div>
-
      
-        <div class="floating-icons">
-            <a href="mailto:vincevince13@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://wa.me/+5588992214251" target="_blank"><i class="fas fa-phone"></i></a>
-            <a href="https://www.linkedin.com/in/vicentefidelix/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+<div class="floating-icons">
+    <div class="icon-container">
+        <a href="mailto:vincevince13@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>        
+        <span class="icon-text">E-mail</span>
+    </div>
+
+    <div class="icon-container">
+        <a href="https://wa.me/+5588992214251" target="_blank">
+            <i class="fas fa-phone"></i>
+        </a>        
+        <span class="icon-text">Whatsapp</span>
+    </div>
+
+    <div class="icon-container">
+        <a href="https://www.linkedin.com/in/vicentefidelix/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>        
+        <span class="icon-text">LinkedIn</span>
+    </div>
+</div>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
     <video id="video-bg" autoplay loop muted playsinline>
@@ -200,14 +217,23 @@
         <div class="loading-icon"></div>
     </div>
 
+    <div class="notification-bar">
+        <div class="notification-content">
+            <img class="setas" src="imagens/arrowsNobg.png" alt="SetasKeyboard">
+            Navegue utilizando as setas.
+            <button class="close-button" aria-label="Fechar notificação" onclick="fecharNotificacao()">&#10006;</button>
+        </div>
+    </div>
+
     <script>
         function hideLoader() {
             document.querySelector('.loader').style.display = 'none';
         }
-        setTimeout(hideLoader, 250);        
+        setTimeout(hideLoader, 450);        
     </script>
 
     <script src="script.js"></script>
+    
 
 </body>
 </html>
