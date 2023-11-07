@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicente Fidelix - Desenvolvedor Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="favicon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <button class="btn" id="btnSobre" data-conteudo="conteudoSobre">Sobre Mim</button>
+            <button class="btn" id="btnProjetos" data-conteudo="conteudoProjetos">Projetos</button>
+            <button class="btn" id="btnTrabalhos" data-conteudo="conteudoHistoria">História</button>
+            <button class="btn" id="btnCursos" data-conteudo="conteudoCursos">Cursos</button>
+            <button class="btn" id="btnRedesSociais" data-conteudo="conteudoRedesSociais">Redes Sociais/Contato</button>
+            <button class="btn" id="btnHabilidades" data-conteudo="conteudoHabilidades">Habilidades</button>
+        </div>
+    </header>
+    
+    <div id="conteudoSobre" class="conteudo conteudo-portugues">
+        <h2 data-translate="sobre"><strong>Quem sou eu?</strong></h2>
+        <div class="content-wrapper">
+            <div class="left">
+                <img class="perfil" src="imagens/perfil.png" alt="Imagem do perfil">
+            </div>
+            <div class="right">
+                <p>
+                    Me chamo Vicente Fidelix. Desde infância fui antenado com tecnologia. Graduado em Fisioterapia, experiência na função de professor universitário por 4 anos. Estudando <strong>Desenvolvimento Web</strong> desde janeiro de 2023. Atuamente focado na mudança de carreira para a mesma, utilizando ferramentas tais como <strong>JavaScript, HTML, CSS</strong> e iniciando em <strong>Angular</strong>.
+                </p>
+                    
+                <p>
+                    Com forte capacidade de escrita e comunicação oral. Possuo artigos publicados em revistas nacionais de renome. Ao longo de minha jornada profissional, percebi o valor da adaptabilidade, do aprendizado contínuo e da importância de entregar um trabalho de alta qualidade com eficiência.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="conteudoProjetos" class="conteudo conteudo-portugues">
+        <h2><strong>Projetos</strong></h2>
+        <div class="content-wrapper">
+            <div class="leftProj">
+                <img class="projetoImg" src="imagens/recicle.png" alt="Imagem de Projeto"> 
+                
+            </div>
+            <div class="right">
+                <p>Página Web para um projeto de Educação Ambiental desenvolvido em uma Escola Estadual no município de Ubajara.
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="conteudoHistoria" class="conteudo conteudo-portugues">        
+        <h2><strong>História</strong></h2>
+        <div class="content-wrapper">
+            <div class="leftHist">
+                <img class="historiaImg" src="imagens/historia.jpg" alt="Imagem historia">
+            </div>
+        <div class="right">
+            <p>Atualmente realizando mudança de carreira, trabalhou posteriormente como como professor universitário em Fisioterapia.</p>
+            <p>Possui alta habilidade de comunicação, inglês e português. Esta capacidade de se comunicar em mais de um idioma foi fundamental para alcançar lacunas culturais e lidar com o mais vasto público.</p>
+            <p>Desde janeiro de 2023 decidiu focar no mundo da tecnologia iniciando pelo desenvolvimento web, possuindo 8 meses de experiência nesta área como Freelancer e também trabalhando em projetos independentes, onde me permite aplicar novas habilidades de Desenvolvimento Web. Mantendo sempre uma aprendizagem contínua.</p>
+        </div>
+    </div>
+</div>
+
+    <div id="conteudoCursos" class="conteudo conteudo-portugues">
+        <h2>Cursos</h2>
+        <div class="CursosDiv">
+            <ul class="cursos">
+                <li class="curso">
+                    <img class="imgCursos" src="imagens/cursoJS.png" alt="Imagem JavaScript">
+                    <p>JavaScript</p>
+                </li>
+                <li class="curso">
+                    <img class="imgCursos" src="imagens/cursoAlgoritmo.png" alt="Imagem Algoritmo">
+                    <p>Algoritmo</p>
+                </li>
+                <li class="curso">
+                    <img class="imgCursos" src="imagens/cursoHTMLCSS.png" alt="Imagem HTML/CSS">
+                    <p>HTML/CSS</p>
+                </li>
+                <li class="curso">
+                    <img class="imgCursos" src="imagens/sql1.jpg" alt="Imagem MySQL">
+                    <p>MySQL</p>
+                </li>
+                <li class="curso">
+                    <img class="imgCursos" src="imagens/suporte1.jpg" alt="Imagem Suporte">
+                    <p>Suporte</p>
+                </li>
+            </ul>
+        </div>               
+    </div>
+</div>
+
+<div id="conteudoRedesSociais" class="conteudo conteudo-portugues">
+    <h2 class="titulo-secao">Redes Sociais e Contato</h2>
+
+    <div class="redes-e-contatos">
+        <div class="contact-square">
+            <h3>E-mail</h3>
+
+            <a href="mailto:vincevince13@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i></a>
+
+            <p>vicentefidelix@gmail.com
+
+            <button class="copy-button" onclick="copyToClipboard('vicentefidelix@gmail.com', 'copy-notification1', event)">
+                <i1 class="far fa-copy"></i1>
+            </button></p>
+
+            <div class="copy-notification" id="copy-notification1">E-mail copiado!</div>
+        </div>
+        <div class="contact-square">
+            <h3>WhatsApp</h3>
+
+            <a href="https://wa.me/+5588992214251" target="_blank">
+                <i class="fas fa-phone"></i></a>
+
+            <p>+55 88 99221-4251
+
+            <button class="copy-button" onclick="copyToClipboard('+55 88 9 9221-4251', 'copy-notification2', event)">
+                <i1 class="far fa-copy"></i1>
+            </button> </p>
+
+            <div class="copy-notification" id="copy-notification2">Número copiado!</div>
+        </div>
+        <div class="contact-square">
+            <h3>LinkedIn</h3>
+
+            <a href="https://www.linkedin.com/in/vicentefidelix" target="_blank">
+                <i class="fab fa-linkedin"></i></a>
+
+            <p>Linkedin.com/in/vicentefidelix
+
+            <button class="copy-button" onclick="copyToClipboard('https:/www.linkedin.com/in/vicentefidelix', 'copy-notification3', event)">
+                <i1 class="far fa-copy"></i1>
+            </button></p>
+
+            <div class="copy-notification" id="copy-notification3">LinkedIn copiado!</div>
+        </div>
+        </div>
+    </div>
+    
+    </div>
+    
+    
+</div>
+
+<div id="conteudoHabilidades" class="conteudo conteudo-portugues">
+    <h2>Habilidades</h2>
+    <div class="habilidades-lista">
+        <ul class="habilidades-lista">
+            <li>
+                <img src="imagens/web1.png" alt="Imagem 1">
+                <p>Experiência Web</p>
+            </li>
+            <li>
+                <img src="imagens/equipe1.png" alt="Imagem 2">
+                <p>Trabalho em Equipe</p>
+            </li>
+            <li>
+                <img src="imagens/org1.png" alt="Imagem 3">
+                <p>Organização</p>
+            </li>
+            <li>
+                <img src="imagens/proativ1.png" alt="Imagem 4">
+                <p>Proatividade</p>
+            </li>
+            <li>
+                <img src="imagens/learning1.png" alt="Imagem 5">
+                <p>Fast Learning</p>
+            </li>
+            <li>
+                <img src="imagens/resolut1.png" alt="Imagem 6">
+                <p>Resolutividade</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+     
+        <div class="floating-icons">
+            <a href="mailto:vincevince13@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/+5588992214251" target="_blank"><i class="fas fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/vicentefidelix/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <video id="video-bg" autoplay loop muted playsinline>
+        <source src="videos/fundo.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <div class="loader">
+        <div class="loading-icon"></div>
+    </div>
+
+    <script>
+        function hideLoader() {
+            document.querySelector('.loader').style.display = 'none';
+        }
+        setTimeout(hideLoader, 250);        
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
